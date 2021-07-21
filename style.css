@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Revalia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+
+*{
+margin:0;
+box-sizing: border-box;
+}
+
+.container-header, .container-main, .container-mainPokedex, .container-footer{
+padding: 1em 2em;
+}
+
+.container-header{
+background-color: #F5DB13;
+height: 100px;
+width: 100%;
+}
+
+.nav-bar{
+display:flex;
+justify-content:space-between;
+}
+
+.logo-img{
+width: 10em;
+height: auto;
+}
+
+.nav-menu{
+display:flex;
+margin-right:30px;
+}
+
+.nav-menu-item{
+font-size: 30px;
+margin: 0 10px;
+line-height: 70px;
+font-family: 'Revalia';
+text-transform: uppercase;
+font-weight: bold;
+width:max-content;
+}
+
+.nav-menu-content{
+padding: 8px 12px;
+border-radius: 3px;
+}
+
+.nav-menu-content:hover{
+background-color: #F2B807;
+transition: 0.5s;
+cursor: pointer;
+color:rgb(246, 238, 238);
+}
+
+.nav-toggle{
+color: #FFF;
+background: none;
+border: none;
+font-size: 30px;
+padding: 0 20px;
+line-height: 60px;
+cursor: pointer;
+display:none;
+}
+
+/*---------------- Estilos de la sección home-------------- */
+.container-main{
+display: flex;
+background-color: #fff;
+}
+
+.container-home{
+display: flex;
+flex-flow: row;
+width: 100%;
+height: 500px;
+background: #F2B807;
+justify-content: space-around;
+align-items: center;
+position: relative;
+}
+
+.container-welcome{
+display:flex;
+width: 55%;
+height: 80%;
+background: #F28F16;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin-right: 35px;
+justify-content: center;
+align-items: center;
+}
+
+.imgPikachu{
+width: 34em;
+min-width:50px;
+height: auto;
+}
+
+.textWelcome{
+font-family: 'Revalia';
+font-size: 6.5vw;
+color:#FFF;
+padding: 5px;
+text-align:center;
+}
+
+/* ----------------Estilo de la sección Pokedex--------------- */
+.container-mainPokedex{
+display: flex;
+justify-content: center;
+background-color: #fff;
+}
+
+/*----------------- Estilo de los filtros------------------ */
+.filterPokemon{
+display:flex;
+align-items: center;
+justify-content: center;
+opacity: 0;
+pointer-events: none;
+}
+
+.filterPokedex{
+border:transparent;
+background:#ECEBEB;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+width: 212px;
+height: 51px;
+font-size:20px;
+font-family: 'Revalia';
+margin:8px;
+}
+
+.filterPokedex:hover{
+cursor: pointer;
+}
+
+.btnCleanFilter{
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+width: 212px;
+height: 51px;
+font-size:20px;
+font-family: 'Revalia';
+background-color:#F5DB13;
+border:transparent;
+}
+
+.fa-trash-alt:before {
+margin:10px;
+}
+
+.fa-trash-alt:hover{
+cursor: pointer;
+transform: scale(1.050);
+color: rgb(173, 73, 73);
+}
+
+/*----------------- Estilo de la tarjeta Pokemon----------------- */
+.cardFrontPokemon,
+.cardPokemonInfo {
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+}
+
+.cardPokemon-front{
+display: flex;
+flex-direction:column;
+justify-content: space-evenly;
+background: linear-gradient(180deg, #70A83B 0%, rgba(112, 168, 59, 0.838912) 16.11%, rgba(112, 168, 59, 0) 100%); 
+border-radius: 25px;
+width: 370px;
+height: 460px;
+font-family: 'Ropa Sans', sans-serif;
+margin: 20px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+gap:10px;
+}
+
+.containerNameNum{
+display:flex;
+flex-direction:row;
+text-transform: uppercase;
+justify-content: space-around;
+width: 370px;
+font-size: 20px;
+font-weight: bold;
+}
+
+.imgPokemon{
+width: 320px;
+height: 320px;
+align-self: center;
+}
+
+.typePokemon {
+text-transform: uppercase;
+background: #a299a3;
+padding: 5px;
+border-radius: 5px;
+color: #fff;
+font-size:25px;
+height: 40px;
+width: 200px;
+align-self:center;
+text-align: center;
+}
+
+.messageCalcular{
+background: #F2B807;
+width: 100%;
+color: rgb(0, 0, 0);
+font-family: 'Revalia';
+font-size: 28px;
+text-align:center;
+justify-content: center;
+height: auto;
+position: absolute;
+top: 100px;
+padding: 10px;
+}
+
+.modal-container{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    position:fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+    z-index:20;
+    flex-direction: column;
+}
+
+.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal-pokemon{
+    display:flex;
+    width: 800px;
+    max-width: 100%;
+    height:500px;
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background:#fff;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+.img-pokemon{
+    width: 400px;
+    height: 400px;
+}
+
+.about-pokemon{
+max-width:300px;
+width:100%;
+font-size: 30px;
+text-align: justify;
+font-family: "Ropa Sans";
+height: 200px;
+}
+
+.name-pokemon{
+font-family: "Ropa Sans";
+font-size: 50px;
+text-transform: uppercase;
+}
+
+.close-modal{
+background-color:transparent;
+}
+
+
+/* ----------------------Estilo del footer ------------------------*/
+.container-footer {
+display:flex;
+background: #F2B807;
+width: 100%;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.textFooter {
+text-align:center;
+color: rgb(0, 0, 0);
+font-family: 'Revalia';
+font-size: 20px;
+}
+/* ----------------------CSS del media para celular ------------------------*/
+@media screen and (max-width:768px) {
+
+.container-header, .container-main, .container-mainPokedex, .container-footer{
+padding: 0.5em 1em;
+}
+
+.container-header{
+height:90px;
+}
+
+.logo-img{
+width: 9em;
+height: auto;
+}
+.nav-menu{
+align-items: center;
+flex-direction: column;
+margin-right: 20px;
+background-color:#F2B807;
+position:fixed;
+top:90px;
+width:100%;
+padding:20px 0;
+height: calc(100% - 90px);
+overflow-y:auto;
+left: 100%;
+z-index:0;
+}
+.nav-toggle{
+display:block;
+}
+
+.nav-menu_visible {
+left: 0;
+position:absolute;
+z-index:3;
+}
+
+.container-main{
+padding:0;
+}
+
+.container-home{
+flex-direction:column-reverse;
+height: calc(100% - 90px);
+position:absolute;
+z-index:2
+}
+
+.container-welcome{
+width: 85%;
+height: 30%;
+margin: 0;
+}
+
+.imgPikachu{
+width:23em;
+height:auto;
+}
+.textWelcome{
+font-size: 10.5vw;
+}
+.nav-toggle:focus:not(:focus-visible) {
+outline: none;
+}
+
+.filterPokedex{
+width: 112px;
+font-size:13px;
+}
+
+.fa-2x {
+font-size: 1.5em;
+}
+
+.messageCalcular{
+top:80px;
+font-size:20px;
+}
+.about-pokemon{
+font-size: 20px;
+max-width: 350px;
+max-height: 100px;
+}
+.img-pokemon{
+width: 300px;
+height: 300px;
+}
+
+.name-pokemon{
+font-size: 40px;
+width: auto;
+}
+
+}
+/*** Prueba de diseño de CSS CardPokemon******/
+
+/*.cardsPokemon{
+display: flex;
+width: 370px;
+height: 478px;
+position: relative;
+transition: .3s ease all;
+transform: rotateY(0deg);
+transform-style: preserve-3d;
+cursor: pointer;
+z-index: 1;
+}
+
+.cardsPokemon.active {
+transform: rotateY(180deg);
+}*/

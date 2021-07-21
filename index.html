@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>.:Pokemon:.</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/ad40416f54.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!------------------------------------Diseño del header---------------------------------->
+    <header class="container-header">
+       <!----------------------Barra de Navegación ---------------------->
+      <nav class="nav-bar">
+        <img src="./data/imagen/logo.png" alt="logo de pokemon" width="180" class="logo-img">
+        <!--------------Modelo en responsive --------------->
+       <button class="nav-toggle">
+        <i class="fas fa-bars"></i>
+       </button>
+        <ul class="nav-menu">
+          <il class="nav-menu-item" >
+            <a id="btnHome" class="nav-menu-content">home</a>
+          </il>
+          <il class="nav-menu-item">
+            <a id="btnPokedex" class="nav-menu-content" >pokedex</a>
+          </il>
+          <il class="nav-menu-item" >
+            <a id="btnInfo" class="nav-menu-content" >+info</a>
+          </il>
+          </ul>
+      </nav>
+    </header>
+  <!---------------------------------Diseño del Main--------------------------------->
+    <main class ="container-main" id="container-main">
+      <section class="container-home" id="containerHome">
+          <img src="./data/imagen/pikachu.png" alt="pikachu img"  id="imgPikachu" class="imgPikachu" >
+          <div class="container-welcome">
+              <p class="textWelcome">Welcome to the community!</p>
+          </div>
+      </section>
+    </main>
+<!--------------------------------Diseño del container pokedex con filtros--------------------------------->
+    <main class="container-mainPokedex" id="containerMainPokedex">
+      <section class="filterPokemon" id="filterOptions" >
+        <select class="filterPokedex" id="seleccionarRegion">
+          <option disabled selected>Region</option>
+          <option value="johto">Johto</option>
+          <option value="kanto">Kanto</option>
+        </select>
+        <select class="filterPokedex" id="seleccionarTipo" name="Tipo">
+          <option disabled selected>Type</option>
+          <option value="grass">Grass</option>
+          <option value="fire">Fire</option>
+          <option value="poison">Poison</option>
+          <option value="water">Water</option>
+          <option value="flying">Flying</option>
+          <option value="bug">Bug</option>
+          <option value="normal">Normal</option>
+          <option value="electric">Electric</option>
+          <option value="ground">Ground</option>
+          <option value="psychic">Psychic</option>
+          <option value="fighting">Fighting</option>
+          <option value="rock">Rock</option>
+          <option value="ghost">Ghost</option>
+          <option value="ice">Ice</option>
+          <option value="dragon">Dragon</option>
+        </select>
+
+        <select class="filterPokedex" id="seleccionarOrden">
+        <option disabled selected>Sort</option>
+        <option value="a-z">Sort A-Z</option>
+        <option value="z-a">Sort Z-A</option>
+        </select>
+
+        <i class="far fa-trash-alt fa-2x" input type="button" id="cleanFilter"></i>
+        <br>
+
+      </section>
+<!---------------------------------Diseño del Modal--------------------------------->
+      <section class="modal-container" id="modal-container">
+        <button class="close-modal" id="close-modal">X</button>
+        <div class="modal-pokemon" id="modal-pokemon">
+        </div>
+
+        
+      </section>
+<!---------------------------------Diseño del Card Pokemon-------------------------------->
+      <section class="cardsPokemon" id="cardsPokemon">
+        <div class="cardFrontPokemon" id="cardFrontPokemon" >
+        </div>
+      </section>
+     
+    </main>
+<!---------------------------------Diseño del container Info Extra--------------------------------->
+    <main id= "containerMoreInfo" style="display:none">
+      <section class="messageCalcular" id="infoExtra" >
+      </section>
+    </main>
+<!---------------------------------Diseño del Footer--------------------------------->
+    <footer class="container-footer" id="container-footer" style="display:none">
+      <p class="textFooter"> ©Created by Tania and Mafer - LIM015</p>
+    </footer>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
