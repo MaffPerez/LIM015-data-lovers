@@ -13,7 +13,7 @@ const containerMain = document.getElementById("container-main");
 const containerMainPokedex = document.getElementById("containerMainPokedex");
 const containerMoreInfo = document.getElementById("containerMoreInfo");
 let containerFilter = document.getElementById("filterOptions");
-const footer = document.getElementById("container-footer");
+
 const seleccionarRegion= document.getElementById("seleccionarRegion");
 const seleccionarTipo = document.getElementById("seleccionarTipo");
 const seleccionarOrden = document.getElementById("seleccionarOrden");
@@ -103,7 +103,6 @@ navMenu.classList.toggle("nav-menu_visible");
 containerMainPokedex.style.display="none";
 containerMoreInfo.style.display="none";
 containerMain.style.display="block";
-footer.style.display="block";
 });
 
 btnPokedex.addEventListener("click",() => {
@@ -112,7 +111,7 @@ containerMainPokedex.style.display="block";
 containerMoreInfo.style.display="none";
 containerFilter.classList.add("show");
   // containerFilter.classList.add("show");
-footer.style.display="block";
+
 navMenu.classList.toggle("nav-menu_visible");
 
 showPokemon();
@@ -127,7 +126,7 @@ containerMain.style.display="none";
 containerFilter.classList.remove("show");
 containerMoreInfo.style.display="block";
 // containerFilter.classList.remove("show");
-footer.style.display="block";
+
 navMenu.classList.toggle("nav-menu_visible");
 
 let rarityPokemon = "legendary";

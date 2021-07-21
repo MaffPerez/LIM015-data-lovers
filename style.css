@@ -9,7 +9,7 @@ box-sizing: border-box;
 .container-header, .container-main, .container-mainPokedex, .container-footer{
 padding: 1em 2em;
 }
-
+/*---------------- Estilos del header-------------- */
 .container-header{
 background-color: #F5DB13;
 height: 100px;
@@ -92,13 +92,13 @@ justify-content: center;
 align-items: center;
 }
 
-.imgPikachu{
+.img-pikachu{
 width: 34em;
 min-width:50px;
 height: auto;
 }
 
-.textWelcome{
+.text-welcome{
 font-family: 'Revalia';
 font-size: 6.5vw;
 color:#FFF;
@@ -291,9 +291,9 @@ display:flex;
 background: #F2B807;
 width: 100%;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+justify-content: center;
 }
 .textFooter {
-text-align:center;
 color: rgb(0, 0, 0);
 font-family: 'Revalia';
 font-size: 20px;
@@ -392,6 +392,11 @@ height: 300px;
 font-size: 40px;
 width: auto;
 }
+
+.textFooter {
+font-size: 13px;
+}
+
 
 }
 /*** Prueba de diseño de CSS CardPokemon******/
