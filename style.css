@@ -92,13 +92,13 @@ justify-content: center;
 align-items: center;
 }
 
-.img-pikachu{
+.imgPikachu{
 width: 34em;
 min-width:50px;
 height: auto;
 }
 
-.text-welcome{
+.textWelcome{
 font-family: 'Revalia';
 font-size: 6.5vw;
 color:#FFF;
